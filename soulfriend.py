@@ -3,7 +3,7 @@ from supabase import create_client
 import json
 
 
-import { createClient } from '@supabase/supabase-js'
+from supabase import create_client
 const supabaseUrl = 'https://trdfbxqjtwbpardosclu.supabase.co'
 const supabaseKey = process.env.SUPABASE_KEY
 const supabase = createClient(supabaseUrl, supabaseKey)
