@@ -2,10 +2,11 @@ import streamlit as st
 from supabase import create_client
 import json
 
-# Initialize Supabase
-SUPABASE_URL = "your_supabase_api_url"
-SUPABASE_KEY = "your_supabase_anon_key"
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+
+import { createClient } from '@supabase/supabase-js'
+const supabaseUrl = 'https://trdfbxqjtwbpardosclu.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
 
 # Function to register a user
 def register_user(name, email, password):
